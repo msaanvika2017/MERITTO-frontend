@@ -1,0 +1,221 @@
+/* ==========================================================================
+   OPPORTUNITY CARD STYLES
+   ========================================================================== */
+
+.opp-card {
+  position: relative;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.opp-card:hover {
+  transform: translateY(-4px);
+  background: var(--bg-card-hover);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7);
+}
+
+.opp-card.border-accent-purple:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(168, 85, 247, 0.25);
+}
+.opp-card.border-accent-pink:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(236, 72, 153, 0.25);
+}
+.opp-card.border-accent-blue:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(56, 189, 248, 0.25);
+}
+.opp-card.border-accent-orange:hover {
+  border-color: rgba(251, 146, 60, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(251, 146, 60, 0.25);
+}
+
+.opp-card-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Header */
+.opp-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.opp-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.type-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.verified-pill {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--emerald);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.bookmark-btn {
+  color: var(--text-muted);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bookmark-btn.active {
+  color: var(--pink);
+  fill: var(--pink);
+}
+
+/* Main */
+.opp-card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.opp-company-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lavender);
+  letter-spacing: 0.02em;
+}
+
+.opp-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.opp-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Skills */
+.opp-skills-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.opp-skill-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.opp-skill-pill.more {
+  color: var(--lavender);
+  background: rgba(192, 132, 252, 0.08);
+}
+
+/* Meta */
+.opp-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-top: 4px;
+}
+
+.opp-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.opp-meta-item.deadline {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* Footer */
+.opp-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: auto;
+}
+
+.opp-payment-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.opp-pay-type {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.opp-pay-val {
+  font-size: 1.22rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: #ffffff;
+}
+
+.opp-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

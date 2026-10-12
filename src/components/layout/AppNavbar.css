@@ -1,0 +1,125 @@
+/* AppNavbar Enhancements */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger.active {
+  color: #ffffff;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #15151f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  min-width: 210px;
+  padding: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(168, 85, 247, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 100;
+  animation: dropdownFade 0.18s ease-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(168, 85, 247, 0.14);
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+.nav-dropdown-item.active {
+  color: var(--lavender);
+  background: rgba(168, 85, 247, 0.2);
+}
+
+.nav-role-badge {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.badge-student {
+  background: rgba(96, 165, 250, 0.2);
+  color: var(--blue);
+}
+
+.badge-club {
+  background: rgba(255, 173, 102, 0.2);
+  color: var(--orange);
+}
+
+.badge-admin {
+  background: rgba(236, 72, 153, 0.2);
+  color: var(--pink);
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--pink));
+  border-radius: 2px;
+}
+
+.mobile-nav-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  padding: 12px 14px 4px;
+  font-weight: 700;
+}

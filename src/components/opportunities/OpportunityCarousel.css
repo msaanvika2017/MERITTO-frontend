@@ -1,0 +1,334 @@
+/* ==========================================================================
+   OPPORTUNITY CAROUSEL STYLES
+   ========================================================================== */
+
+.carousel-wrapper {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.carousel-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carousel-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+}
+
+.carousel-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--purple);
+  border-color: var(--lavender);
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.5);
+  transform: scale(1.05);
+}
+
+.slide-counter {
+  font-size: 0.86rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-secondary);
+  padding: 0 6px;
+  letter-spacing: 0.05em;
+}
+
+.counter-sep {
+  color: var(--text-dim);
+  margin: 0 4px;
+}
+
+/* Track Container */
+.carousel-track-container {
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  position: relative;
+  width: 100%;
+}
+
+.carousel-slider {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Featured Hero Card */
+.featured-hero-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 21, 34, 0.85) 0%, rgba(12, 13, 22, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-xl);
+  padding: 36px 40px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.featured-hero-card.border-purple {
+  border-color: rgba(168, 85, 247, 0.35);
+}
+.featured-hero-card.border-pink {
+  border-color: rgba(236, 72, 153, 0.35);
+}
+.featured-hero-card.border-emerald {
+  border-color: rgba(52, 211, 153, 0.35);
+}
+.featured-hero-card.border-orange {
+  border-color: rgba(251, 146, 60, 0.35);
+}
+
+.card-ambient-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Slide Top Bar */
+.slide-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.slide-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.slide-compensation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.comp-type {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.comp-amount {
+  font-size: 1.65rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+/* Slide Body */
+.slide-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slide-college-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.council-name {
+  font-weight: 600;
+  color: var(--lavender);
+}
+
+.dot-divider {
+  color: var(--text-muted);
+}
+
+.deadline-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--orange);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.slide-heading {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.slide-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.slide-skills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.skill-chip {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* Slide Footer */
+.slide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.slide-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.meta-info {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.slide-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.slide-apply-btn {
+  font-weight: 700;
+  padding: 10px 22px;
+}
+
+/* Dots Indicator */
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.dot-indicator {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.dot-bar {
+  display: block;
+  width: 28px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.dot-indicator.active .dot-bar {
+  width: 56px;
+  background: var(--gradient-main);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+.dot-indicator:hover .dot-bar {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-hero-card {
+    padding: 24px 20px;
+    gap: 18px;
+  }
+  .slide-heading {
+    font-size: 1.45rem;
+  }
+  .slide-desc {
+    font-size: 0.95rem;
+  }
+  .carousel-title {
+    font-size: 1.35rem;
+  }
+  .slide-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .slide-action-btns {
+    width: 100%;
+    justify-content: stretch;
+  }
+  .slide-action-btns .btn {
+    flex: 1;
+  }
+}
